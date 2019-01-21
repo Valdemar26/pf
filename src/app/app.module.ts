@@ -4,8 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import {HTTP_INTERCEPTORS} from '@angular/common/http';
-import {AppInterceptor} from './interceptors/deltas-interceptor';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { AppInterceptor } from './interceptors/app-interceptor';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,8 @@ import {AppInterceptor} from './interceptors/deltas-interceptor';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [
     {
