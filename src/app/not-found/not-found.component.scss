@@ -1,0 +1,11 @@
+@import '../../assets/styles/partials/_base.scss';
+
+.container {
+  text-align: center;
+  span {
+    color: $gray-text;
+  }
+  button {
+    cursor: pointer;
+  }
+}
