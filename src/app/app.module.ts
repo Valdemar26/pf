@@ -6,6 +6,20 @@ import { AppComponent } from './app.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AppInterceptor } from './interceptors/app-interceptor';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  MatButtonModule,
+  MatIconModule,
+  MatInputModule,
+  MatNativeDateModule,
+  MatRadioModule,
+  MatSelectModule,
+  MatTabsModule,
+  MatFormFieldModule,
+  MatCheckboxModule,
+  MatDatepickerModule
+} from '@angular/material';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -14,8 +28,24 @@ import { AppInterceptor } from './interceptors/app-interceptor';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTabsModule,
+    MatRadioModule,
+    MatInputModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatCheckboxModule,
+    MatButtonModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    ToastrModule.forRoot({
+      positionClass: 'toast-bottom-center',
+      closeButton: true,
+      timeOut: 3000
+    })
   ],
   providers: [
     {
