@@ -1,0 +1,16 @@
+.dish-container {
+  .container {
+    .row {
+      .col-md-6 {
+        .dish-img {
+          .dish-img-conteiner {
+            img {
+              max-width: 400px;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
