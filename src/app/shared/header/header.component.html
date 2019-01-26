@@ -1,0 +1,127 @@
+<header id="header">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 nav-left">
+				<div class="nav-left-top">
+					<div class="feedback">
+						<div class="cart" [routerLink]='["order-restaurant"]'>
+							<img src="../../../assets/img/shopping-cart.png">
+							<p>Корзина ресторану</p>
+						</div>
+					</div>
+				</div>
+				<ul class="nav">
+					<li>
+						<a [routerLink]='[""]'>
+							Головна
+						</a>
+					</li>
+					<li>
+						<a [routerLink]='["restaurant"]'>
+							Ресторан
+						</a>
+					</li>
+					<li>
+						<a class="ration-link">
+							Раціони
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-4 logo-wrap">
+				<a routerLink="">
+					<img class="logo" src="../assets/img/logo-new.png" alt="logo">
+				</a>
+			</div>
+			<div class="col-md-4 nav-right">
+				<div class="nav-rigth-top">
+					<div class="soc-icons">
+						<a href="https://www.facebook.com/powerfoodlviv/" target="_blank">
+							<i class="fa fa-facebook-f"></i>
+						</a>
+						<a href="https://www.instagram.com/powerfoodlviv/" target="_blank">
+							<i class="fa fa-instagram"></i>
+						</a>
+					</div>
+					<div class="cart ration-cart">
+						<p>Корзина раціонів</p>
+						<img src="../../../assets/img/shopping-cart.png">
+					</div>
+				</div>
+				<ul class="nav">
+					<li>
+						<a [routerLink]='["contacts"]'>
+							Контакти
+						</a>
+					</li>
+					<li>
+						<a [routerLink]='["order/deliveri"]'>
+							Доставка і оплата
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="nav-btn" (click)='mobileNav=!mobileNav' (click)='barEffect=!barEffect' [ngClass]="{'bar-effect':barEffect}">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<!--mobile menu start-->
+			<div class="mobile-menu-open" [ngClass]="{'mobile-menu':mobileNav}">
+
+				<div class="mobile-carts">
+					<div class="cart restourant-cart" [routerLink]='["order-restaurant"]' (click)='mobileNav=!mobileNav' (click)='barEffect=!barEffect'>
+						<img src="../../../assets/img/shopping-cart.png">
+						<p>Корзина ресторану</p>
+					</div>
+					<div class="cart ration-cart" [routerLink]='["order"]' (click)='mobileNav=!mobileNav' (click)='barEffect=!barEffect'>
+						<p>Корзина раціонів</p>
+						<img src="../../../assets/img/shopping-cart.png">
+					</div>
+				</div>
+
+				<ul class="nav">
+					<li>
+						<a [routerLink]='[""]' (click)='mobileNav=!mobileNav' (click)='barEffect=!barEffect'>
+							Головна
+						</a>
+					</li>
+					<li>
+						<a [routerLink]='["restaurant"]' (click)='mobileNav=!mobileNav' (click)='barEffect=!barEffect'>
+							Ресторан
+						</a>
+					</li>
+					<li>
+						<a class="ration-cart" [routerLink]='["ration"]' (click)='mobileNav=!mobileNav' (click)='barEffect=!barEffect'>
+							Раціони
+						</a>
+					</li>
+					<li>
+						<a [routerLink]='["contacts"]' (click)='mobileNav=!mobileNav' (click)='barEffect=!barEffect'>
+							Контакти
+						</a>
+					</li>
+					<li>
+						<a [routerLink]='["order/deliveri"]' (click)='mobileNav=!mobileNav' (click)='barEffect=!barEffect'>
+							Доставка і оплата
+						</a>
+					</li>
+				</ul>
+				<div class="soc-icons">
+					<p>
+						Ми в:
+					</p>
+					<a href="https://www.facebook.com/powerfoodlviv/" target="_blank">
+						<i class="fa fa-facebook-f"></i>
+					</a>
+					<a href="https://www.instagram.com/powerfoodlviv/" target="_blank">
+						<i class="fa fa-instagram"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
