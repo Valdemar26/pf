@@ -1,4 +1,104 @@
-<div *ngFor="let item of products?.productsJson"> <!-- let item of products -->
-  <app-item [item]="item"></app-item>
+<div class="container">
+  <div class="row">
+    <h3>Меню ресторану</h3>
+    <h6>Перший у Львові ресторан здорового харчування.
+      Для Вас ми розробили унікальне меню з урахуванням кількості калорій, білків, жирів та вуглеводів.
+      Збалансоване харчування є основою вашого здоров'я  та гарного настрою.
+      В затишній атмосфері нашого ресторану ви зможете гарно провести час, смакуючи різноманітні страви та напої,
+      розроблені за нашою унікальною рецептурою.
+    </h6>
+  </div>
 </div>
+
+<mat-tab-group>
+  <mat-tab label="Все меню">
+    <div *ngFor="let item of products?.productsJson">
+      <app-item [item]="item"></app-item>
+    </div>
+  </mat-tab>
+  <mat-tab label="Power Lunch">
+      <div *ngFor="let item of products?.productsJson">
+        <ng-container *ngIf="item?.tab === 'lunch'">
+          <app-item [item]="item"></app-item>
+        </ng-container>
+      </div>
+  </mat-tab>
+  <mat-tab label="Сніданки">
+    <div *ngFor="let item of products?.productsJson">
+      <ng-container *ngIf="item?.tab === 'breakfast'">
+        <app-item [item]="item"></app-item>
+      </ng-container>
+    </div>
+  </mat-tab>
+  <mat-tab label="Брускети">
+    <div *ngFor="let item of products?.productsJson">
+      <ng-container *ngIf="item?.tab === 'bruskety'">
+        <app-item [item]="item"></app-item>
+      </ng-container>
+    </div>
+  </mat-tab>
+  <mat-tab label="Бургери">
+    <div *ngFor="let item of products?.productsJson">
+      <ng-container *ngIf="item?.tab === 'burgers'">
+        <app-item [item]="item"></app-item>
+      </ng-container>
+    </div>
+  </mat-tab>
+  <mat-tab label="Салати">
+    <div *ngFor="let item of products?.productsJson">
+      <ng-container *ngIf="item?.tab === 'salads'">
+        <app-item [item]="item"></app-item>
+      </ng-container>
+    </div>
+  </mat-tab>
+  <mat-tab label="Spring Роли">
+    <div *ngFor="let item of products?.productsJson">
+      <ng-container *ngIf="item?.tab === 'rols'">
+        <app-item [item]="item"></app-item>
+      </ng-container>
+    </div>
+  </mat-tab>
+  <mat-tab label="Супи">
+    <div *ngFor="let item of products?.productsJson">
+      <ng-container *ngIf="item?.tab === 'soups'">
+        <app-item [item]="item"></app-item>
+      </ng-container>
+    </div>
+  </mat-tab>
+  <mat-tab label="Основні страви">
+    <div *ngFor="let item of products?.productsJson">
+      <ng-container *ngIf="item?.tab === 'main'">
+        <app-item [item]="item"></app-item>
+      </ng-container>
+    </div>
+  </mat-tab>
+  <mat-tab label="Десерти">
+    <div *ngFor="let item of products?.productsJson">
+      <ng-container *ngIf="item?.tab === 'desserts'">
+        <app-item [item]="item"></app-item>
+      </ng-container>
+    </div>
+  </mat-tab>
+  <mat-tab label="Смузі">
+    <div *ngFor="let item of products?.productsJson">
+      <ng-container *ngIf="item?.tab === 'smoothies'">
+        <app-item [item]="item"></app-item>
+      </ng-container>
+    </div>
+  </mat-tab>
+  <mat-tab label="Протеїнові коктейлі">
+    <div *ngFor="let item of products?.productsJson">
+      <ng-container *ngIf="item?.tab === 'proteine'">
+        <app-item [item]="item"></app-item>
+      </ng-container>
+    </div>
+  </mat-tab>
+  <mat-tab label="Амінокислотні коктейлі">
+    <div *ngFor="let item of products?.productsJson">
+      <ng-container *ngIf="item?.tab === 'amino'">
+        <app-item [item]="item"></app-item>
+      </ng-container>
+    </div>
+  </mat-tab>
+</mat-tab-group>
 
